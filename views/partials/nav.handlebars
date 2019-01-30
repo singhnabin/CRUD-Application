@@ -1,0 +1,57 @@
+<nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="/index">Explore Bucket</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a class="nav-item nav-link" href="/home">Home
+
+                </a>
+            </li>
+            <li>
+                <a class="nav-item nav-link" href="/about">About</a>
+            </li>
+
+            {{#if user}}
+            <li>
+                <a class="nav-item nav-link" href="/places">Show All List</a>
+            </li>
+            <li>
+                <a class="nav-item nav-link" href="/explore/add">Add Place</a>
+            </li>
+            <li>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+            </li>
+            {{else}}
+            <li>
+                <a class="nav-item nav-link" href="/list">Show All List</a>
+            </li>
+            {{/if}}
+
+
+
+
+        </ul>
+        {{#if user}} {{else}}
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                    SignUp
+                </a>
+                <div class="dropdown-menu" id="dropDownLogin">
+
+                    <a class="dropdown-item" href="/login">login</a>
+                    <a class="dropdown-item" href="/register">Register</a>
+
+
+                </div>
+            </li>
+        </ul>
+        {{/if}}
+
+    </div>
+
+</nav>

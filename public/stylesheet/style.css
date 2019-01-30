@@ -1,0 +1,10 @@
+#navBar a,
+#navbarNavAltMarkup .navbar-nav a {
+  font-size: 20px;
+  color: #fff;
+}
+
+#dropDownLogin,
+#dropDownLogin:hover > a {
+  background-color: #000;
+}

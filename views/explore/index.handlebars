@@ -1,0 +1,23 @@
+{{#each places}}
+<div class="card card-body mt-2 mb-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+    <p>{{user}}</p>
+    {{!-- {{#ifCond user currentUser}} --}}
+    <p>
+
+        <a href="/{{id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+    </p>
+    <form action="/explore/{{id}}/?_method=DELETE" method="post">
+        <input type="submit" class="btn btn-danger" value="Delete">
+    </form>
+
+    {{!-- {{/if}} --}}
+</div>
+
+{{else}}
+<div class="jumbotron">
+    <p class="text-center">No places are added</p>
+</div>
+
+{{/each}}
